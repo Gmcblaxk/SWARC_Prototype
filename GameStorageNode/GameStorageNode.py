@@ -46,7 +46,8 @@ def main():
     
     register_with_loadbalancer(args.port)
     
-    app.run(host=BASE_URL, port=args.port, debug=False)
+    app.run(host='0.0.0.0')
+    # app.run(host=BASE_URL, port=args.port, debug=False)
 
 if __name__ == '__main__':
     main()
