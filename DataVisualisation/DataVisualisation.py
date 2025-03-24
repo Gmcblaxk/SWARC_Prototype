@@ -52,3 +52,25 @@ plt.legend()
 plt.grid(True)
 plt.savefig("ping_closer_server.png")
 plt.close()
+
+# Count occurrences
+au_count = closer_server.count("AU")
+nl_count = closer_server.count("NL")
+
+# Categories and values
+categories = ["AU", "NL"]
+values = [au_count, nl_count]
+colors = ["blue", "red"]
+
+# Plot bar chart
+plt.figure(figsize=(6, 6))
+plt.bar(categories, values, color=colors, width=0.5)
+
+# Labels and title
+plt.xlabel("Server")
+plt.ylabel("Count")
+plt.title("Count of Closer Server Decisions")
+
+# Save and show
+plt.savefig("ping_closer_server_column.png")
+plt.show()
