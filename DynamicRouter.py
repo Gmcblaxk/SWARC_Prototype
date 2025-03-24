@@ -4,7 +4,9 @@ import requests
 app = Flask(__name__)
 
 BASE_URL = "127.0.0.1"
-EXPOSED_PORT = 8089
+AUS_URL = "209.38.82.124"
+NDL_URL = "174.138.14.43"
+EXPOSED_PORT = 5000
 SERVERS = []
 
 #Checks whether LoadBalancer can access external server
@@ -31,4 +33,4 @@ def get_servers():
     return jsonify(available_servers)
 
 if __name__ == '__main__':
-    app.run(host=BASE_URL, port=EXPOSED_PORT, debug=True)
+    app.run(host="0.0.0.0")
